@@ -145,6 +145,34 @@ main > section {
 .our-futures {
   max-width: 500px;
 }
+
+/*  fact section related styles */
+.fact-description {
+  max-width: 540px;
+}
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 124px;
+}
+.fact-card {
+  width: 240px;
+  height: 240px;
+  border: 1px solid #ff900e;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.fact-number {
+  font-size: 2.8rem;
+  font-weight: 600;
+  padding: 10px 0 5px 0;
+}
+.fact-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 /* media query styles */
 /* for small device */
 @media screen and (max-width: 576px) {
@@ -158,6 +186,14 @@ main > section {
   .teams-img-container {
     grid-template-columns: repeat(1, 1fr);
   }
+  section.some-facts {
+    text-align: center;
+  }
+  .facts-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    justify-items: center;
+  }
 }
 
 /* for medium device - tablet/laptop */
@@ -165,7 +201,16 @@ main > section {
   .teams {
     flex-direction: column;
   }
-  .teams > .our-futures {
+  .teams > .our-futures,
+  section.some-facts {
     text-align: center;
+  }
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
+  }
+  .fact-description {
+    margin: 24px auto;
   }
 }
