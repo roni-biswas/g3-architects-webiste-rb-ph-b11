@@ -53,6 +53,24 @@
   border-radius: 8px;
   border: none;
 }
+.text-primary {
+  color: #ff900e;
+}
+
+main > section {
+  margin-top: 130px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.section-description {
+  margin-top: 1.5rem;
+  line-height: 1.6rem;
+  margin-bottom: 2rem;
+}
 /* header styles */
 
 /* navbar styles */
@@ -93,6 +111,7 @@
 .banner-title {
   font-size: 4rem;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .banner-description {
@@ -104,11 +123,49 @@
   width: 100%;
 }
 
+/* teams and futures related styles */
+.teams {
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4.5rem;
+}
+.teams-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.teams-img-container img {
+  width: 100%;
+}
+.quick-list {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.our-futures {
+  max-width: 500px;
+}
 /* media query styles */
 /* for small device */
 @media screen and (max-width: 576px) {
   .navbar {
     flex-direction: column;
     gap: 20px;
+  }
+  .teams {
+    flex-direction: column;
+  }
+  .teams-img-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* for medium device - tablet/laptop */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .teams > .our-futures {
+    text-align: center;
   }
 }
